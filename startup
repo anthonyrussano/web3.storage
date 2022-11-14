@@ -1,0 +1,32 @@
+#!/bin/bash
+
+DIRECTORY=".venv"
+
+if [ -d "$DIRECTORY" ]
+then
+    echo ""
+    echo ""
+    echo "Virtual environment already exists."
+else
+    echo "Creating virtual environment"
+    python3 -m venv .venv
+    echo "Python virtual environment created!"
+fi
+
+echo ""
+echo ""
+echo "To activate the Python Virtual Environment:"
+echo ""
+echo "$ source .venv/bin/activate"
+echo ""
+echo ""
+echo "To install required packages:"
+echo ""
+echo "$ pip install -r requirements.txt"
+echo ""
+echo ""
+echo "Usage example:"
+echo ""
+echo '$ python main.py file.jpg "filename"'
+echo ""
+echo ""

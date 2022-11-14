@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Quick Usage: provide two arguments, the videoURL and the "Title"
+
+# Example: $ ./script https://www.youtube.com/watch?v=pZLm7QZfcDU "The Isley Brothers - Smooth Jams"
+
+# Prerequisites:
+
+# nodejs should be installed.
+
+# 1. Install the web3 storage package using npm:
+
+# sudo npm install -g @web3-storage/w3
+
+# Usage Requirements:
+
+# Open your working directory.
+
+# 1. Setup a Python Environment:
+
+# sudo apt install python3.10-venv
+
+# python3 -m venv .venv
+
+# 2. Activate Python Environment
+
+# source .venv/bin/activate
+
+# 3. Install yt-dlp
+
+# a. pip install -r requirements.txt
+
+# b. pip install yt-dlp
+
+# b .pip freeze > requirements.txt
+
+## uses yt-dlp to download video as mp4
+yt-dlp -o file.mp4 -f 18 $1
+## uses w3 to upload file without folder wrapper
+w3 put file.mp4 --no-wrap --name="$2"
+## deletes input file
+rm -Rf file.mp4
