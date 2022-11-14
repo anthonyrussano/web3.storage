@@ -1,41 +1,25 @@
 # web3.storage
 
+To run python from docker:
+
 ```
 docker build --target dev . -t python
 docker run -it -v ${PWD}:/work python sh
 ```
 
-## Description
+- `nodejs` should be installed.
+- Install the web3 storage package using npm:
+  - `sudo npm install -g @web3-storage/w3`
 
-This project allows you to upload files to IPFS.
-
-## Usage
-
-### API Key
-
-`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweENjM2VCYzlhRTIxMkFEMGQ0ZWEzMDI4NGMxM2Y1QTVjNTY5NUZCNjgiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NTU3NDc3MTE3NTIsIm5hbWUiOiJhbnRob255cnVzc2Fuby5jb20ifQ.UotWcqd72zF7_DiCPJCXP4f8DpCN7IgTOJ-txDfJ9bc`
-
-### Requirements
-
-This example assumes you have nodejs installed.
-
-If so, then install use the supplied package.json file to install the required packages.
-
-`$ npm install`
-
-### Run the script
+- `$ npm install`
 
 To upload one or more files:
 
-`$ node uploader.js --token=<API-KEY> ~/filename1 ~/filename2 ~/filenameN`
+- `node uploader.js --token=${WEB3API}  ~/filename1 ~/filename2 ~/filenameN`
 
 To upload an entire directory:
 
-`$ node uploader.js --token=<API-KEY> ~/path/to/files/`
-
-Example:
-
-`$ node uploader.js --token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweENjM2VCYzlhRTIxMkFEMGQ0ZWEzMDI4NGMxM2Y1QTVjNTY5NUZCNjgiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NTU3NDc3MTE3NTIsIm5hbWUiOiJhbnRob255cnVzc2Fuby5jb20ifQ.UotWcqd72zF7_DiCPJCXP4f8DpCN7IgTOJ-txDfJ9bc ~/Downloads`
+`$ node uploader.js --token=${WEB3API} ~/path/to/files/`
 
 This should provide the following output:
 
