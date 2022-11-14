@@ -5,8 +5,7 @@
     "description": "Get started using web3.storage in Node.js",
     "type": "module",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "upload": "node uploader.js --token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweENjM2VCYzlhRTIxMkFEMGQ0ZWEzMDI4NGMxM2Y1QTVjNTY5NUZCNjgiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NTU3NDc3MTE3NTIsIm5hbWUiOiJhbnRob255cnVzc2Fuby5jb20ifQ.UotWcqd72zF7_DiCPJCXP4f8DpCN7IgTOJ-txDfJ9bc "
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
         "minimist": "^1.2.5",
